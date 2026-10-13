@@ -1,0 +1,69 @@
+:root {
+  --bg: #fff; --text: #202124; --sub: #5f6368; --border: #dfe1e5;
+  --card: #fff; --shadow: 0 1px 6px rgba(32,33,36,.28); --btn: #f8f9fa; --accent: #1a73e8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #202124; --text: #e8eaed; --sub: #9aa0a6; --border: #5f6368;
+    --card: #303134; --shadow: 0 1px 6px rgba(0,0,0,.5); --btn: #303134; --accent: #8ab4f8;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+  font-family: "Google Sans", Roboto, "Noto Sans KR", Arial, sans-serif;
+  display: flex; flex-direction: column; align-items: center;
+}
+header {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; font-size: 14px; color: var(--sub);
+}
+.school {
+  display: flex; align-items: center; gap: 8px; text-decoration: none;
+  color: var(--text); font-weight: 500; font-size: 15px;
+  padding: 6px 12px 6px 6px; border-radius: 20px;
+}
+.school:hover { background: var(--btn); }
+.school .badge {
+  width: 32px; height: 32px; border-radius: 50%; background: var(--accent);
+  display: grid; place-items: center;
+}
+.school .badge svg { width: 20px; height: 20px; fill: #fff; }
+
+main {
+  flex: 1; width: 100%; max-width: 584px; padding: 0 16px;
+  display: flex; flex-direction: column; align-items: center; margin-top: 18vh;
+}
+form { width: 100%; }
+.search {
+  display: flex; align-items: center; height: 46px; padding: 0 14px;
+  border: 1px solid var(--border); border-radius: 24px; background: var(--card);
+}
+.search:hover, .search:focus-within { box-shadow: var(--shadow); border-color: transparent; }
+.search svg { width: 20px; height: 20px; fill: var(--sub); flex-shrink: 0; }
+.search input { flex: 1; border: 0; outline: 0; background: none; color: var(--text); font-size: 16px; padding: 0 12px; }
+.btns { display: flex; justify-content: center; margin-top: 28px; }
+.btns button {
+  background: var(--btn); color: var(--text); border: 1px solid var(--btn);
+  border-radius: 4px; padding: 0 16px; height: 36px; font-size: 14px; cursor: pointer;
+}
+.btns button:hover { border-color: var(--border); box-shadow: 0 1px 1px rgba(0,0,0,.1); }
+
+.weather { display: flex; gap: 16px; width: 100%; margin-top: 40px; }
+.card {
+  flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; display: flex; align-items: center; gap: 12px;
+}
+.card .icon { font-size: 36px; }
+.card .city { font-size: 14px; color: var(--sub); }
+.card .temp { font-size: 28px; }
+.card .desc { font-size: 13px; color: var(--sub); }
+
+.quote { margin-top: 40px; text-align: center; color: var(--sub); font-size: 15px; line-height: 1.6; cursor: pointer; }
+.quote .who { display: block; margin-top: 4px; font-size: 13px; }
+footer { width: 100%; background: var(--btn); color: var(--sub); font-size: 13px; padding: 14px 24px; margin-top: 40px; }
+
+@media (max-width: 480px) {
+  .weather { flex-direction: column; }
+  main { margin-top: 10vh; }
+}

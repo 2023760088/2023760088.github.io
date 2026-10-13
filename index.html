@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시작 페이지</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="school" href="https://www.sdu.ac.kr" target="_blank" rel="noopener noreferrer">
+    <span class="badge">
+      <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+    </span>
+    서울디지털대학교
+  </a>
+  <span id="clock"></span>
+</header>
+
+<main>
+  <form action="https://www.google.com/search" method="get">
+    <div class="search">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <input type="text" name="q" placeholder="Google 검색 또는 URL 입력" autocomplete="off" autofocus>
+    </div>
+    <div class="btns">
+      <button type="submit">Google 검색</button>
+    </div>
+  </form>
+
+  <section class="weather">
+    <div class="card" id="seoul"><div class="icon">⏳</div><div><div class="city">서울</div><div class="temp">--°</div><div class="desc">불러오는 중…</div></div></div>
+    <div class="card" id="jeju"><div class="icon">⏳</div><div><div class="city">제주</div><div class="temp">--°</div><div class="desc">불러오는 중…</div></div></div>
+  </section>
+
+  <p class="quote" id="quote" title="클릭하면 다른 명언"></p>
+</main>
+
+<footer>대한민국 · 날씨 정보: Open-Meteo</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
